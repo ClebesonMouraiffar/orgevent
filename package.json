@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/ClebesonMouraiffar/orgevent/issues"
   },
-  "homepage": "https://github.com/ClebesonMouraiffar/orgevent#readme"
+  "homepage": "https://github.com/ClebesonMouraiffar/orgevent#readme",
+  "dependencies": {
+    "knex": "^0.19.5",
+    "mysql": "^2.17.1",
+    "restify": "^8.4.0",
+    "restify-errors": "^8.0.1"
+  }
 }
