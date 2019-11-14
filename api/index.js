@@ -57,3 +57,31 @@ server.get('/show/:id', (req, res, next) => {
         res.send(dados);
     }, next);
 });
+
+server.put('/update/:id', (req, res, next) => {
+    
+    const { id } = req.params;
+
+    knex('table')
+        .where('id', id)
+        .update(req.body)
+        .then((dados) => {
+            if(!dados) return res.send(new errs.BadRequestError('nada foi encontrado'))
+            res.send('dados atualizados');
+        }, next)
+        
+});
+
+server.del('/delete/:id', (req, res, next) => {
+    
+    const { id } = req.params;
+
+    knex('table')
+        .where('id', id)
+        .delete()
+        .then((dados) => {
+            if(!dados) return res.send(new errs.BadRequestError('nada foi encontrado'))
+            res.send('dados excluidos');
+        }, next)
+        
+});
