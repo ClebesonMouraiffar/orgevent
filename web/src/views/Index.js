@@ -10,9 +10,9 @@ import IndexHeader from "components/Headers/IndexHeader.js";
 import DarkFooter from "components/Footers/DarkFooter.js";
 
 // sections for this page
-import BestEvent from "./index-sections/BestEvents.js";
+import HomeFeatured from "./index-sections/HomeFeatured.js";
 import Get from "./index-sections/Get.js";
-import Featured from "./index-sections/Featured.js";
+import EventFeatured from "./index-sections/EventFeatured.js";
 
 
 function Index() {
@@ -33,8 +33,8 @@ function Index() {
       <div className="wrapper">
         <IndexHeader />
         <div className="main">
-        <BestEvent />
-        <Featured />
+        <HomeFeatured />
+        <EventFeatured />
         <Get />
         
         </div>
