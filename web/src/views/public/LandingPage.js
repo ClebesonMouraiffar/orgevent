@@ -38,49 +38,53 @@ function LandingPage() {
           <Container>
             <Row>
               <Col className="ml-auto mr-auto text-center" md="8">
+                <i className="now-ui-icons ui-1_calendar-60"></i>
                 <h5 className="description">
-                  According to the National Oceanic and Atmospheric                  
+                  De: 23 Nov às 00:00
                 </h5>
                 <h5 className="description">
-                  According to the National Oceanic and Atmospheric                  
+                  Ate: 24 Nov às 06:00
                 </h5>
               </Col>
             </Row>
             <div className="separator separator-primary"></div>
             <div className="section-story-overview">
-              <Row>              
+              <Row>
                 <Col md="9">
                   <h3>
                     DESCRIÇÃO DO EVENTO
                   </h3>
                   <p>
-                    The Arctic Ocean freezes every winter and much of the
-                    sea-ice then thaws every summer, and that process will
-                    continue whatever happens with climate change. Even if the
-                    Arctic continues to be one of the fastest-warming regions of
-                    the world, it will always be plunged into bitterly cold
-                    polar dark every winter. And year-by-year, for all kinds of
-                    natural reasons, there’s huge variety of the state of the
-                    ice.
+                  Mais uma noite épica na VLV dia 23/11... 
+                  e quem vai comandar a festa é o nosso queridinho @lumiofficial
+                  Aquele que arrasa com sua performance e energia surreal!
                   </p>
-                  
+                  <p>
+                  As primeiras 200 mulheres que chegar no dia da festa terão sua entrada free. 
+                  Homens ingresso antecipado no valor de R$ 20,00
+                  </p>
+                  <p>
+                  Ingressos disponíveis com promoters oficiais da casa e na @openbier.
+                  #Vem para o baile, vem para a VLV
+                  </p>
+
                 </Col>
                 <Col md="2">
                   <h5>
                     INGRESSOS
                   </h5>
                   <medium>
-                    R$ 12,00
+                    R$ 20,00
                   </medium>
                 </Col>
               </Row>
             </div>
           </Container>
         </div>
-       
+
         <div className="section section-contact-us text-center">
           <Container>
-            <h4 className="title">Fale com o Produtor</h4>
+            <h4 className="title">Fale com o Promoter</h4>
             <p className="description">Sua opnião é muito importante</p>
             <Row>
               <Col className="text-center ml-auto mr-auto" lg="6" md="8">
@@ -95,7 +99,7 @@ function LandingPage() {
                     </InputGroupText>
                   </InputGroupAddon>
                   <Input
-                    placeholder="First Name..."
+                    placeholder="Nome..."
                     type="text"
                     onFocus={() => setFirstFocus(true)}
                     onBlur={() => setFirstFocus(false)}
@@ -122,7 +126,7 @@ function LandingPage() {
                   <Input
                     cols="80"
                     name="name"
-                    placeholder="Type a message..."
+                    placeholder="Escreva sua mensagem..."
                     rows="4"
                     type="textarea"
                   ></Input>
@@ -136,7 +140,7 @@ function LandingPage() {
                     onClick={e => e.preventDefault()}
                     size="lg"
                   >
-                    Send Message
+                    Enviar
                   </Button>
                 </div>
               </Col>

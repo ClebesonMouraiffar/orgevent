@@ -65,7 +65,7 @@ function ProfilePage() {
                     className="image-container image-left"
                     style={{
                       backgroundImage:
-                        "url(" + require("assets/img/login.jpg") + ")"
+                        "url(" + require("assets/img/vive1.jpg") + ")"
                     }}
                   >
                     <p className="blockquote blockquote-info">
@@ -78,7 +78,7 @@ function ProfilePage() {
                     className="image-container"
                     style={{
                       backgroundImage:
-                        "url(" + require("assets/img/bg3.jpg") + ")"
+                        "url(" + require("assets/img/vive2.jpg") + ")"
                     }}
                   ></div>
                 </Col>
@@ -87,7 +87,7 @@ function ProfilePage() {
                     className="image-container image-right"
                     style={{
                       backgroundImage:
-                        "url(" + require("assets/img/bg1.jpg") + ")"
+                        "url(" + require("assets/img/vive3.jpg") + ")"
                     }}
                   ></div>
                   <h3>
