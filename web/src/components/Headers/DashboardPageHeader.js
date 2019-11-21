@@ -11,7 +11,7 @@ function DashboardPageHeader() {
     React.useEffect(() => {
       if (window.innerWidth > 991) {
         const updateScroll = () => {
-          let windowScrollTop = window.pageYOffset / 3;
+          let windowScrollTop = window.pageYOffset / 2;
           pageHeader.current.style.transform =
             "translate3d(0," + windowScrollTop + "px,0)";
         };
