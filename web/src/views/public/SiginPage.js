@@ -50,19 +50,55 @@ function LoginPage() {
               <Card className="card-login card-plain">
                 <Form action="" className="form" method="">
                   <CardBody>
+                  <InputGroup
+                      className={
+                        "no-border input-lg" +
+                        (firstFocus ? " input-group-focus" : "")
+                      }
+                    >                      
+                      <InputGroupAddon addonType="prepend">
+                        <InputGroupText>
+                          <i className="now-ui-icons users_single-02"></i>
+                        </InputGroupText>
+                      </InputGroupAddon>
+                      <Input
+                        placeholder="Nome..."
+                        type="text"
+                        onFocus={() => setFirstFocus(true)}
+                        onBlur={() => setFirstFocus(false)}
+                      ></Input>
+                    </InputGroup>
                     <InputGroup
                       className={
                         "no-border input-lg" +
                         (firstFocus ? " input-group-focus" : "")
                       }
-                    >
+                    >                      
                       <InputGroupAddon addonType="prepend">
                         <InputGroupText>
-                          <i className="now-ui-icons users_circle-08"></i>
+                          <i className="now-ui-icons users_single-02"></i>
                         </InputGroupText>
                       </InputGroupAddon>
                       <Input
-                        placeholder="Login..."
+                        placeholder="Sobrenome..."
+                        type="text"
+                        onFocus={() => setFirstFocus(true)}
+                        onBlur={() => setFirstFocus(false)}
+                      ></Input>
+                    </InputGroup>
+                    <InputGroup
+                      className={
+                        "no-border input-lg" +
+                        (firstFocus ? " input-group-focus" : "")
+                      }
+                    >                      
+                      <InputGroupAddon addonType="prepend">
+                        <InputGroupText>
+                          <i className="now-ui-icons ui-1_email-85"></i>
+                        </InputGroupText>
+                      </InputGroupAddon>
+                      <Input
+                        placeholder="Email..."
                         type="text"
                         onFocus={() => setFirstFocus(true)}
                         onBlur={() => setFirstFocus(false)}
@@ -92,22 +128,11 @@ function LoginPage() {
                       block
                       className="btn-round"
                       color="info link"
-                      href="/dashboard-page"
+                      href="/#"
                       size="lg"
                     >
-                      Entrar
+                      Cadastrar
                     </Button>
-                    <div className="pull-left">
-                      <h6>
-                        <a
-                          className="link"
-                          href="/sigin-page"
-                         // onClick={e => e.preventDefault()}
-                        >
-                          Criar Conta
-                        </a>
-                      </h6>
-                    </div>
                   </CardFooter>
                 </Form>
               </Card>
