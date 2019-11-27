@@ -9,6 +9,7 @@ import {
     CardBody,
     Form,
     Input,
+    CustomInput,
     InputGroupAddon,
     InputGroupText,
     InputGroup
@@ -145,9 +146,9 @@ function BestEvent() {
                                             ></Input>
                                         </InputGroup>
                                     </Col>                                    
-                                </Row>                                
+                                </Row>
                                 <Row>
-                                    <Col md="7">
+                                    <Col md="12">
                                         <InputGroup
                                             className={
                                                 "no-border input-lg" +
@@ -171,6 +172,46 @@ function BestEvent() {
                                                 disabled
                                             ></Input>
                                         </InputGroup>
+                                    </Col>                                    
+                                </Row>                                
+                                <Row>
+                                    <Col md="7">
+                                    <InputGroup
+                            className={
+                                "no-border " +
+                                (lastFocus ? " input-group-focus" : "")
+                            }
+                        >
+                            <InputGroupAddon addonType="prepend">
+                                <InputGroupText>
+                                    <i className="now-ui-icons design_image"></i>
+                                </InputGroupText>
+                            </InputGroupAddon>
+                            <CustomInput
+                                label="Imagem 1"
+                                type="file"
+                                onFocus={() => setLastFocus(true)}
+                                onBlur={() => setLastFocus(false)}                                
+                            ></CustomInput>
+                        </InputGroup>
+                        <InputGroup
+                            className={
+                                "no-border " +
+                                (lastFocus ? " input-group-focus" : "")
+                            }
+                        >
+                            <InputGroupAddon addonType="prepend">
+                                <InputGroupText>
+                                    <i className="now-ui-icons design_image"></i>
+                                </InputGroupText>
+                            </InputGroupAddon>
+                            <CustomInput
+                                label="Imagem 2"
+                                type="file"
+                                onFocus={() => setLastFocus(true)}
+                                onBlur={() => setLastFocus(false)}                                
+                            ></CustomInput>
+                        </InputGroup>                        
                                     </Col>
                                     <Col md="5">
                                         <InputGroup
@@ -195,7 +236,28 @@ function BestEvent() {
                                             ></Input>
                                         </InputGroup>
                                     </Col>
+                                    <Col md="12">
+                                    <InputGroup
+                            className={
+                                "no-border " +
+                                (lastFocus ? " input-group-focus" : "")
+                            }
+                        >
+                            <InputGroupAddon addonType="prepend">
+                                <InputGroupText>
+                                    <i className="now-ui-icons design_image"></i>
+                                </InputGroupText>
+                            </InputGroupAddon>
+                            <CustomInput
+                                label="Imagem 3"
+                                type="file"
+                                onFocus={() => setLastFocus(true)}
+                                onBlur={() => setLastFocus(false)}                                
+                            ></CustomInput>
+                        </InputGroup>
+                                    </Col>
                                 </Row>
+                                
                             </Form>
                         </CardBody>
                     </Card>

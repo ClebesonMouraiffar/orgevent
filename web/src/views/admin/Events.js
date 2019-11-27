@@ -9,6 +9,7 @@ import {
     ModalFooter,
     Form,
     Input,
+    CustomInput,
     InputGroupAddon,
     InputGroupText,
     InputGroup,
@@ -202,6 +203,24 @@ function BestEvent() {
                                 onFocus={() => setLastFocus(true)}
                                 onBlur={() => setLastFocus(false)}
                             ></Input>
+                        </InputGroup>
+                        <InputGroup
+                            className={
+                                "no-border " +
+                                (lastFocus ? " input-group-focus" : "")
+                            }
+                        >
+                            <InputGroupAddon addonType="prepend">
+                                <InputGroupText>
+                                    <i className="now-ui-icons design_image"></i>
+                                </InputGroupText>
+                            </InputGroupAddon>
+                            <CustomInput
+                                label="Imagem Banner"
+                                type="file"
+                                onFocus={() => setLastFocus(true)}
+                                onBlur={() => setLastFocus(false)}                                
+                            ></CustomInput>
                         </InputGroup>
                         <button className="btn-round btn btn-info" onClick={toggle}>Salvar</button>
                     </Form>
