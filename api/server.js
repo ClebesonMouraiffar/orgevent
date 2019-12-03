@@ -30,25 +30,32 @@ server.listen(8000, function () {
 
 //ROTAS REST
 
-server.get('/', (req, res, next) => {
-    knex(table).then((dados) => {
+server.get('/:tab', (req, res, next) => {
+
+    const { tab } = req.params;
+
+    knex(tab).then((dados) => {
         res.send(dados);
     }, next);
 });
 
-server.post('/create', (req, res, next) => {
-    knex(table)
+server.post('/create/:tab', (req, res, next) => {
+
+    const { tab } = req.params;
+
+    knex(tab)
     .insert(req.body)
     .then((dados) => {
         res.send(dados);
     }, next);
 });
 
-server.get('/show/:id', (req, res, next) => {
+server.get('/show/:id/:tab', (req, res, next) => {
 
     const {id}= req.params;
+    const { tab } = req.params;
 
-    knex(table)
+    knex(tab)
     .where('id', id)
     .first()
     .then((dados) => {
@@ -58,11 +65,12 @@ server.get('/show/:id', (req, res, next) => {
     }, next);
 });
 
-server.put('/update/:id', (req, res, next) => {
+server.put('/update/:id/:tab', (req, res, next) => {
     
     const { id } = req.params;
+    const { tab } = req.params;
 
-    knex('table')
+    knex('tab')
         .where('id', id)
         .update(req.body)
         .then((dados) => {
@@ -72,11 +80,12 @@ server.put('/update/:id', (req, res, next) => {
         
 });
 
-server.del('/delete/:id', (req, res, next) => {
+server.del('/delete/:id/:tab', (req, res, next) => {
     
     const { id } = req.params;
+    const { tab } = req.params;
 
-    knex('table')
+    knex('tab')
         .where('id', id)
         .delete()
         .then((dados) => {
